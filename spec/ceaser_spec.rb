@@ -6,4 +6,8 @@ describe "#ceaser_cipher" do
   it "returns a string" do
     expect(ceaser_cipher(str, num)).to be_a(String)
   end
+
+  it "Does not return the original string" do
+    expect(ceaser_cipher(str, num)).not_to eql(str)
+  end
 end
