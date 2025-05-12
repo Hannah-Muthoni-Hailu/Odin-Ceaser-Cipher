@@ -1,7 +1,7 @@
 def ceaser_cipher(string, shift)
   alphabet = %w[a b c d e f g h i j k l m n o p q r s t u
                 v w x y z]
-  string_arr = string.split('')
+  string_arr = string.chars
 
   res = string_arr.map do |letter|
     if alphabet.include?(letter.downcase) # Account for non-alphabetic characters
@@ -14,5 +14,3 @@ def ceaser_cipher(string, shift)
   end
   res.join
 end
-
-p ceaser_cipher('What a string!', 5)
